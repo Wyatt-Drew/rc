@@ -8,16 +8,14 @@ const listings = [
   {
     id: 1,
     images: [houseImage, houseImage, houseImage],
-    address: '1234 Example Street, Regina, SK',
+    address: '2405 Legislative Dr, Regina, SK',
     status: 'Ready for Immediate Possession',
-    link: '/details/1'
   },
   {
     id: 2,
     images: [houseImage, houseImage, houseImage],
-    address: '5678 Sample Avenue, Regina, SK',
+    address: '3260 Albert St, Regina, SK',
     status: 'Under Construction',
-    link: '/details/2'
   }
 ];
 
@@ -40,7 +38,7 @@ const ForSale = () => {
           <div className="listing-info">
             <h3>{listing.status}</h3>
             <p>{listing.address}</p>
-            <Link to={listing.link} className="learn-more-button">Learn More</Link>
+            <Link to={`/details/${listing.id}?address=${encodeURIComponent(listing.address)}&status=${encodeURIComponent(listing.status)}`} className="learn-more-button">Learn More</Link>
           </div>
         </div>
       ))}

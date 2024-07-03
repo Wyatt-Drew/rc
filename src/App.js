@@ -15,13 +15,15 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<>
-            <Hero />
-            <ForSale />
+            <div id="hero"><Hero /></div>
+            <div id="for-sale"><ForSale /></div>
           </>} />
           <Route path="/buy" element={<div>Buy Page</div>} />
           <Route path="/details/:id" element={<Details />} />
         </Routes>
-        <Footer />
+        <div id="footer">
+          <Footer />
+        </div>
       </div>
     </Router>
   );

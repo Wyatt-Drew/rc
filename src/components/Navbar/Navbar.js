@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import './Navbar.css';
-import logo from '../../assets/logo.jfif'; // Updated to logo.jfif
+import logo from '../../assets/logo.jfif'; // Ensure you have a logo image in the assets folder
 
 const Navbar = () => {
   return (
@@ -10,9 +10,9 @@ const Navbar = () => {
         <img src={logo} alt="Logo" />
       </div>
       <ul className="navbar-links">
-        <li><Link to="/" className="navbar-link">Home</Link></li>
-        <li><Link to="/buy" className="navbar-link">Buy</Link></li>
-        <li><a href="#contact" className="navbar-link">Contact</a></li>
+        <li><Link to="hero" smooth={true} duration={500} className="navbar-link">Home</Link></li>
+        <li><Link to="for-sale" smooth={true} duration={500} className="navbar-link">Buy</Link></li>
+        <li><Link to="footer" smooth={true} duration={500} className="navbar-link">Contact</Link></li>
       </ul>
     </nav>
   );
