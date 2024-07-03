@@ -25,6 +25,7 @@ const ForSale = () => {
   return (
     <div className="for-sale-section">
       <h2>FOR SALE</h2>
+      <p>Built by us, for you. We have a variety of homes for sale in the Regina and surrounding areas at different stages, styles, and prices.</p>
       {listings.map(listing => (
         <div key={listing.id} className="listing">
           <div className="listing-carousel">
